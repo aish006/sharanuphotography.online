@@ -1,0 +1,108 @@
+body {
+    background-color: #060608;
+}
+svg {
+    width: 256px;
+    height: 256px;
+}
+* {
+    box-sizing: border-box;
+}
+svg.photo-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 18%;
+    transform: perspective(700px) rotateX(58deg);
+     -webkit-transform: perspective(700px) rotateX(58deg);
+     color: white;
+}
+.full-icon {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    left: 50%;
+    top: 50%;
+   transform: translateX(-50%) translateY(-50%);
+  min-height: 256px;
+  color: white;
+}
+.full-icon .button-press {
+    transform-origin: 0% 8%;
+    animation: 3.7s btn-press infinite;
+}
+
+.button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    top: 50px;
+    
+}
+
+.button:hover {
+  background-color: blueviolet;
+  color: darkviolet;
+  opacity: 1.0;
+}
+
+
+
+@keyframes btn-press {
+    0%, 2.702702702702703% { transform: scaleY(1); }
+    5.405405405405405%, 10.81081081081081% { transform: scaleY(0.75); }
+  10.91081081081081%, 100% { transform: scaleY(1); }
+}
+.full-icon .light-blink {
+    opacity: 0;
+    animation: 3.7s dot-blink infinite ease-out;
+}
+@keyframes dot-blink {
+    0%, 3.378378378378378% { opacity: 0; }
+    6.756756756756757% { opacity: 1; }
+    10.13513513513513% { opacity: 0; }
+    13.51351351351351% { opacity: 1; }
+    16.89189189189189%, 100% { opacity: 0; }
+}
+.full-icon .photo {
+    transform: scaleY(0);
+    transform-origin: 100% 31%;
+    animation: 3.7s photo-out infinite ease;
+    color: white;
+}
+@keyframes photo-out {
+    0%, 20.27027027027027% { transform: scaleY(0); }
+    40.54054054054054%, 70% { transform: scaleY(1); }
+    80%, 100% { transform: translateY(70%); }
+}
+
+/*hire me on fiverr.com*/
+.hire-me {
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+}
+
+.round {
+    border-radius: 50%;
+    font-size: 35px;
+}
+
+.previous round
+{
+    position: relative;
+    left: 20px; /* Adjust the value as per your requirement */
+}
+
+footer h4 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    max-width: 2000px;
+    font-family: 'Dancing Script', cursive;
+}
+

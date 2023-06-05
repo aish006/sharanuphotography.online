@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<a href="index.html" class="previous round">&#8249;</a>
+
+<body>
+<div id="container">
+	<h1></h1>
+  <div class="full-icon">
+  	<div class="page" id="one">
+    <svg viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M40 22C17.9086 22 0 39.9086 0 62V174C0 196.091 17.9086 214 40 214H216C238.091 214 256 196.091 256 174V62C256 39.9086 238.091 22 216 22H40ZM36 144C31.5817 144 28 147.582 28 152V156C28 160.418 31.5817 164 36 164H220C224.418 164 228 160.418 228 156V152C228 147.582 224.418 144 220 144H36ZM168 82C168 104.091 150.091 122 128 122C105.909 122 88 104.091 88 82C88 59.9086 105.909 42 128 42C150.091 42 168 59.9086 168 82ZM30 59C35.5228 59 40 54.5228 40 49C40 43.4772 35.5228 39 30 39C24.4772 39 20 43.4772 20 49C20 54.5228 24.4772 59 30 59Z" fill="#252525" />
+      <path id="Subtract_2" fill-rule="evenodd" clip-rule="evenodd" d="M128 112C144.569 112 158 98.5685 158 82C158 65.4315 144.569 52 128 52C111.431 52 98 65.4315 98 82C98 98.5685 111.431 112 128 112ZM128 102C139.046 102 148 93.0457 148 82C148 70.9543 139.046 62 128 62C116.954 62 108 70.9543 108 82C108 93.0457 116.954 102 128 102Z" fill="#252525"/>
+      <path id="Ellipse 2" d="M128 67C136.284 67 143 73.7157 143 82L128 67Z" fill="#252525"/>
+      <circle class="light-blink" cx="30" cy="49" r="7" fill="#252525"/>
+      <path class="button-press" d="M148 10C148 4.47715 152.477 0 158 0H198C203.523 0 208 4.47715 208 10V20H148V10Z" fill="#252525" />
+    </svg>
+    <svg class="photo-svg" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect class="photo" x="48" y="90" width="160" height="160" fill="#dddddd" stroke="#252525" stroke-width="10"/>
+      <rect class="photo" x="63" y="105" width="130" height="130" fill="#252525"/>
+    </svg>
+  </div>
+  
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="button">
+ <button> <a href="booking1.html">Click here to fill details</a> <br>
+ </button>          
+</div>
+
+
+
+<script>
+	function ScrollHandler(pageId) { 
+  var page = $('#' + pageId);
+  var pageStart = page.offset().top;
+  var pageJump = false;
+
+  function scrollToPage() {
+    pageJump = true;
+	  $('html, body').animate({ 
+      scrollTop: pageStart 
+    }, {
+      duration: 1000,
+      complete: function() {
+        pageJump = false;
+      }
+    });  
+  }
+  window.addEventListener('wheel', function(event) {
+   var viewStart = $(window).scrollTop();
+   if (!pageJump) { 
+      var pageHeight = page.height();
+      var pageStopPortion = pageHeight / 2;
+      var viewHeight = $(window).height();
+
+      var viewEnd = viewStart + viewHeight;
+      var pageStartPart = viewEnd - pageStart;
+      var pageEndPart = (pageStart + pageHeight) - viewStart;
+      
+      var canJumpDown = pageStartPart >= 0; 
+      var stopJumpDown = pageStartPart > pageStopPortion; 
+      
+      var canJumpUp = pageEndPart >= 0; 
+      var stopJumpUp = pageEndPart > pageStopPortion; 
+
+      var scrollingForward = event.deltaY > 0;
+      if (  ( scrollingForward && canJumpDown && !stopJumpDown) 
+         || (!scrollingForward && canJumpUp   && !stopJumpUp)) {
+        event.preventDefault();
+        scrollToPage();
+      } 
+   } else {
+     event.preventDefault();
+   }    
+  });
+}
+new ScrollHandler('one'); 
+new ScrollHandler('two');
+</script>
+
+</body>
+</html>

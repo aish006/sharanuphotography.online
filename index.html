@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sharanu Photography - Professional photography services">
+  <meta name="keywords" content="photography, photographer, videographer, design, events">
+  
+  <title></title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .bottom-left {
+      position: absolute;
+      bottom: 3%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      margin-bottom: 40px; /* Adjust as needed */
+    }
+
+    .bottom-right {
+      position: absolute;
+      bottom: 30%;
+      right: 30%;
+      transform: translate(50%, 50%);
+    }
+
+
+    .btns {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .bottom-left1 {
+      text-align: left;
+      position: absolute;
+      left: 410px; /* Adjust the value to position horizontally */
+      bottom: 10px; /* Adjust the value to position vertically */
+      border-radius: 29px;
+    }
+
+    .bottom-left1 a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff; /* Customize the background color */
+      color: #fff; /* Customize the text color */
+      text-decoration: none;
+      border-radius: 4px; /* Customize the border radius */
+      font-size: 19px;
+      font-weight: 400px;
+      color: #fff;
+      background-color: #3d535f;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      letter-spacing: 2px;
+      text-transform: capitalize;
+      box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+      font-family: 'Dancing Script', cursive;
+    }
+
+    /* Additional CSS code for responsiveness */
+    @media screen and (max-width: 600px) {
+      .bottom-left {
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .bottom-left1 {
+        text-align: center;
+        position: relative;
+        left: 0;
+        bottom: 10px;
+      }
+
+      .bottom-left1:before {
+        content: "Hello I'm"; /* Add the text before the button */
+        display: block;
+        margin-bottom: 5px;
+        color: #3d535f;
+        font-size: 16px;
+      }
+    }
+
+    
+  </style>
+</head>
+<br>
+<br>
+<h1>Welcome to Sharanu Photography</h1>
+<img src="sl1.jpg" width="140" height="100" class="logo">
+
+<body>
+  <div class="container">
+    <button class="openbtn" onclick="openNav()">&#9776; </button>
+    <div id="sidebar" class="sidebar">
+      <button class="closebtn" onclick="closeNav()">&times;</button>
+      <ul class="navbar-nav ml-auto">
+        <li  class="nav-item">
+          <a class="nav-link" href="index.html">Home</a> 
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="About.html">About</a> 
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="Album Creation.html">Album Creation</a>
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="Baby.html">Baby</a> 
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="Candid.html">Candid</a> 
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="Maternity.html">Maternity</a> 
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="Portraits.html">Portraits</a> 
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="Pre-Wedding.html">Pre-Wedding</a> 
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="Traditional.html">Traditional</a> 
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="Wedding.html">Wedding</a> 
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="Makeup.html">Makeup</a> 
+        </li>
+        <li  class="nav-item">
+          <a class="nav-link" href="Contact Us.html">Contact Us</a> 
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="cols cols0">
+      <div class="bottom-left">
+        <span class="topline">Hello </span>
+        <h2>I'm <span class="multitext"></span></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="btns">
+    <div class="bottom-left1">
+      <a href="booking.html">Book your day now!</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" align="center">Step 1
+      <br>
+      <div class="card-body">
+        Whether it is an outdoor or indoor shoot venue, our guide will be there through all steps to be taken necessary for a stress-free experience.
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-header" align="center">Step 2
+      <br>
+      <div class="card-body">
+        We will scout your location, find perfect lights, design your dream bouquet, make sure you have everything you need to celebrate your day. Leave it to us.
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-header" align="center">Step 3
+      <br>
+      <div class="card-body">
+        We will ensure memories of your day are preserved! We work with you to choose your best photo.
+      </div>
+    </div>
+  </div>
+
+  <div class="cols cols1">
+    <div class="bottom-right">
+      <div class="imgbox">
+        <img src=""  id="splash">
+        <img src="ph2.png" width="400" height="400">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("sidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sidebar").style.width = "0";
+    }
+  </script>
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script>
+    var typingEffect = new Typed(".multitext",{
+      strings :["photographer","videographer","designer"],
+      loop : true,
+      typeSpeed : 100,
+      backSpeed : 80,
+      backDelay : 1500
+    })
+  </script>
+   <script>
+    // Your existing JavaScript code
+
+    // Additional JavaScript code for responsiveness
+    function adjustPosition() {
+      if (window.innerWidth <= 600) {
+        document.querySelector('.bottom-left').style.bottom = '10%';
+        document.querySelector('.bottom-left').style.left = '50%';
+        document.querySelector('.bottom-left').style.transform = 'translateX(-50%)';
+
+        document.querySelector('.bottom-left1').style.textAlign = 'center';
+        document.querySelector('.bottom-left1').style.position = 'relative';
+        document.querySelector('.bottom-left1').style.left = '0';
+        document.querySelector('.bottom-left1').style.bottom = '10px';
+      } else {
+        document.querySelector('.bottom-left').style.bottom = '3%';
+        document.querySelector('.bottom-left').style.left = '40%';
+        document.querySelector('.bottom-left').style.transform = 'translate(-50%, -50%)';
+
+        document.querySelector('.bottom-left1').style.textAlign = 'left';
+        document.querySelector('.bottom-left1').style.position = 'absolute';
+        document.querySelector('.bottom-left1').style.left = '410px';
+        document.querySelector('.bottom-left1').style.bottom = '10px';
+      }
+    }
+
+    // Call the adjustPosition function on page load and window resize
+    window.addEventListener('load', adjustPosition);
+    window.addEventListener('resize', adjustPosition);
+  </script>
+  <br>
+  <br>
+  <footer>
+  <h4>&copy; 2023 Sharanu Photography</h4>
+</footer>
+</body>
+</html>
